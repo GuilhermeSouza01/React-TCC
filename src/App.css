@@ -1,38 +1,120 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  width: 100%;
   min-height: 100vh;
+  background-color: #FFECEF;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  flex-direction: row;
+}
+
+/* 
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+} */
+
+.wrappButton {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  max-width: 100%;
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.generateButton {
+  appearance: button;
+  backface-visibility: hidden;
+  background-color: #52154E;
+  border-radius: 6px;
+  border-width: 0;
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .1) 0 2px 5px 0, rgba(0, 0, 0, .07) 0 1px 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Ubuntu, sans-serif;
+  font-size: 100%;
+  font-weight: bold;
+  height: 44px;
+  line-height: 1.15;
+  margin: 12px 0 0;
+  outline: none;
+  overflow: hidden;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transform: translateZ(0);
+  transition: all .2s, box-shadow .08s ease-in;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 150px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.generateButton:disabled {
+  cursor: default;
 }
+
+.generateButton:focus {
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(200, 50, 211, 0.3) 0 0 0 4px;
+}
+
+.containerTable {
+  
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.containerTable table {
+  background-color: #ffffff;
+  border-collapse: collapse;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .15);
+}
+
+.containerTable table thead {
+  
+  color: #fff;
+  align-items: center;
+
+}
+
+.containerTable table thead th {
+  
+  /* padding: 15px; */
+  background-clip: border-box;
+  text-align: center;
+}
+.containerTable table th, td {
+  padding: 12px 15px;
+  text-align: center;
+}
+.containerTable table thead tr {
+  background-color: #52154E;
+  color: #ffffff;
+  text-align: left;
+}
+
+.containerTable table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.containerTable table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.containerTable table tbody tr:last-of-type {
+  border-bottom: 2px solid #52154E;
+}
+
+.containerTable table tbody tr.active-row {
+  font-weight: bold;
+  color: #52154E;
+}
+
