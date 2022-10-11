@@ -29,7 +29,8 @@ const App = () => {
           onClick={() => setCallComponent(true)}
           className="generateButton"
         >
-          Gerar Tabela
+          Gerar Tabela 
+          
         </button>
       </div>
 
