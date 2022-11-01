@@ -1,7 +1,6 @@
 import React from "react";
 import myData from "./db/json-tccfile.json";
 export default function Table() {
-  let count = 1;
 
   return (
     <>
@@ -19,7 +18,7 @@ export default function Table() {
           <tbody>
             {myData.map((item, index) => (
                 <tr key={index}>
-                    <td>{count++}</td>
+                    <td>{item.index + 1}</td>
                     <td>{item.name}</td>
                     <td>{item.age}</td>
                     <td>{item.phone}</td>
